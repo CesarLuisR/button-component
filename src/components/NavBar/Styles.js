@@ -1,16 +1,16 @@
 import styled from "styled-components";
 import "../../assets/Fonts.css";
 
-export const NavBarContainer = styled.div`
+export const Container = styled.div`
   background: #fafbfd;
-  height: 100vh;
+  height: 100%;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
 `;
 
-export const NavBarTitle = styled.div`
+export const Title = styled.div`
   position: absolute;
   width: 114px;
   height: 20px;

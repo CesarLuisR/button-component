@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import NavBar from "./components/NavBar/NavBar";
+import Content from "./components/Content/Content";
 
 const App = () => {
   const Container = styled.div`
@@ -11,6 +12,7 @@ const App = () => {
   return (
     <Container>
       <NavBar />
+      <Content />
     </Container>
   );
 };

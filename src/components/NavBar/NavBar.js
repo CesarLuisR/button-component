@@ -1,18 +1,12 @@
 import React from "react";
-import {
-  NavBarContainer,
-  NavBarTitle,
-  MainColor,
-  Nav,
-  NavItem,
-} from "./Styles";
+import { Container, Title, MainColor, Nav, NavItem } from "./Styles";
 
 const NavBar = () => {
   return (
-    <NavBarContainer>
-      <NavBarTitle>
+    <Container>
+      <Title>
         <MainColor>Dev</MainColor>challenges.io
-      </NavBarTitle>
+      </Title>
       <Nav>
         <NavItem>Colors</NavItem>
         <NavItem>Typography</NavItem>
@@ -21,7 +15,7 @@ const NavBar = () => {
         <NavItem>Inputs</NavItem>
         <NavItem>Grid</NavItem>
       </Nav>
-    </NavBarContainer>
+    </Container>
   );
 };
 
