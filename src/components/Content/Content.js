@@ -41,8 +41,24 @@ const Content = () => {
         </ButtonsColumn>
         <ButtonsColumn>
           <ButtonSpace>
-            <ButtonSpaceTitle>&lt;Button disabled/&gt;</ButtonSpaceTitle>
-            <Button disabled />
+            <ButtonSpaceTitle>
+              &lt;Button color="#00ff00" /&gt;
+            </ButtonSpaceTitle>
+            <Button color="#00ff00" />
+          </ButtonSpace>
+          <ButtonSpace>
+            <ButtonSpaceTitle>
+              &lt;Button color="#00ff00" disabledShadow/&gt;
+            </ButtonSpaceTitle>
+            <Button color="#00ff00" disabledShadow />
+          </ButtonSpace>
+        </ButtonsColumn>
+        <ButtonsColumn>
+          <ButtonSpace>
+            <ButtonSpaceTitle>
+              &lt;Button color="#00ff00" disabled/&gt;
+            </ButtonSpaceTitle>
+            <Button color="#00ff00" disabled />
           </ButtonSpace>
           <ButtonSpace>
             <ButtonSpaceTitle>

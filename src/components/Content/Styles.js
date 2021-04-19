@@ -4,7 +4,7 @@ import "../../assets/Fonts.css";
 export const Container = styled.div`
   width: 100%;
   height: 100vh;
-  margin-bottom: 200px;
+  margin-bottom: 330px;
 `;
 
 export const Title = styled.div`
@@ -165,6 +165,17 @@ const handleSize = (size) => {
   }
 }
 
+const useShadow = (color, shadow, variant) => {
+  if (variant === "text") return "none";
+  if (color) {
+    if (shadow) return "none";
+    return `0px 2px 3px ${color}`;
+  } else {
+    if (shadow) return "none";
+    return "0px 2px 3px #e0e0e0";
+  }
+}
+
 export const Button = styled.button`
   background: ${(props) => useBackground(props.color, props.variant)};
   border-radius: 6px;
@@ -182,12 +193,16 @@ export const Button = styled.button`
   outline: none;
   transition: 0.3s;
   border: ${(props) =>
-  props.variant ? useVariant(props.variant, props.color) : "none"};
-  transform: scale(${props => handleSize(props.size)});
+    props.variant ? useVariant(props.variant, props.color) : "none"};
+  transform: scale(${(props) => handleSize(props.size)});
+  box-shadow: ${(props) =>
+    useShadow(props.color, props.disabledShadow, props.variant)};
 
   &::after {
-    content: "${(props) => handleContent(props.content, props.startIcon, props.endIcon)}";
     padding: 15px;
+    content: "${(props) =>
+      handleContent(props.content, props.startIcon, props.endIcon)}";
+      
   }
 
   &:hover,
@@ -207,7 +222,7 @@ export const Footer = styled.div`
   position: absolute;
   width: 400px;
   height: 17px;
-  top: 900px;
+  top: 1020px;
   font-family: Montserrat;
   font-style: normal;
   font-weight: 500;
@@ -215,4 +230,5 @@ export const Footer = styled.div`
   line-height: 17px;
   text-align: center;
   color: #474447;
+  margin-bottom: 1000px;
 `;
